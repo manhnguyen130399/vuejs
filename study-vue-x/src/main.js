@@ -3,18 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import {store} from './store/store.js'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-
-router.beforeEach((to, from, next) => {
-  console.log("route guards");
-  next()
-})
-
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
